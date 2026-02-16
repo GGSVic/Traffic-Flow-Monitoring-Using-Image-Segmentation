@@ -30,11 +30,12 @@ To run this project on an Ubuntu 22.04 environment:
 
 ```bash
 # Clone the repository
-git clone https://github.com/GGSVic/Traffic-Flow-Monitoring-Using-Image-Segmentation.git
+git clone https://github.com/GGSVic/Traffic-Flow-Monitoring-Using-Image-Segmentation.git traffic-flow
+cd traffic-flow
 # Build the docker image
 docker build -t traffic-flow .
 # Add permission for docker applications to display their graphical user interfaces
 xhost +local:docker
 # Run the container with the mounted volumes and the needed configuration to display GUIs
-docker run -e DISPLAY=$DISPLAY -v "(pwd):/app" -v /tmp/.X11-unix:/tmp/.X11-unix traffic-flow:latest
+docker run -e DISPLAY=$DISPLAY -v "$(pwd):/app" -v /tmp/.X11-unix:/tmp/.X11-unix traffic-flow:latest
 ```
