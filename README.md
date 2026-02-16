@@ -29,6 +29,8 @@ The Pipeline:
 To run this project on an Ubuntu 22.04 environment:
 
 ```bash
+# Clone the repository
+git clone https://github.com/GGSVic/Traffic-Flow-Monitoring-Using-Image-Segmentation.git
 # Build the docker image
 docker build -t traffic-flow .
 # Add permission for docker applications to display their graphical user interfaces
