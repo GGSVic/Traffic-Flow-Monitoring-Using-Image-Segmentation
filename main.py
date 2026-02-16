@@ -141,14 +141,12 @@ def segment_image(frame: np.ndarray, background: np.ndarray) -> np.ndarray:
 
 def traffic_flow(v: cv2.VideoCapture, background: np.ndarray, output_file: str) -> None:
     """
-    Docstring for traffic_flow
+    This methods segments the moving cars and draws bounding boxes for valid objects. 
 
-    :param v: Description
-    :type v: cv2.VideoCapture
-    :param background: Description
-    :type background: np.ndarray
-    :param output_file: Description
-    :type output_file: str
+    Args: 
+        v (cv2.VideoCapture): Video capture object.
+        background (np.ndarray): Background image. 
+        output_file (str): Name of the file to save the results. 
     """
 
     frame_width = int(v.get(cv2.CAP_PROP_FRAME_WIDTH))
